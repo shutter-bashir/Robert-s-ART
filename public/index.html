@@ -1,11 +1,11 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Robert Bashir — AI and back-end engineer</title>
 <meta name="description" content="Bashir is a developer who builds apps, websites and automations for scaling businesses. Projects, case studies and live demos.">
 <meta name="theme-color" content="#1f1f1e">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Robert Bashir — AI and back-end engineer">
 <meta property="og:description" content="Apps, websites and automations for scaling businesses. Projects, case studies and live demos.">
-<meta property="og:image" content="/og.jpg">
+<meta property="og:image" content="https://shutter-bashir.github.io/Robert-s-ART/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,8 +62,8 @@
 html,body,.cs{transition:background-color .5s ease,color .5s ease}
 /* wallpaper: fixed collage behind the whole page, tinted per mode so the text stays readable */
 .wall{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:var(--bg)}
-.wall__img{position:absolute;left:0;top:0;width:100%;aspect-ratio:1080/1920;min-height:100%;background:url(/media/wallpaper.webp) center top/cover no-repeat;filter:saturate(.9);will-change:transform;transition:opacity .7s ease}
-.wall__img--l{aspect-ratio:600/750;background-image:url(/media/wallpaper-light.webp);filter:grayscale(1) contrast(1.05);opacity:0}
+.wall__img{position:absolute;left:0;top:0;width:100%;aspect-ratio:1080/1920;min-height:100%;background:url(media/wallpaper.webp) center top/cover no-repeat;filter:saturate(.9);will-change:transform;transition:opacity .7s ease}
+.wall__img--l{aspect-ratio:600/750;background-image:url(media/wallpaper-light.webp);filter:grayscale(1) contrast(1.05);opacity:0}
 :root[data-mode="light"] .wall__img--d{opacity:0}
 :root[data-mode="light"] .wall__img--l{opacity:1}
 .wall::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgb(var(--bg-rgb) / .86) 0%,rgb(var(--bg-rgb) / .7) 40%,rgb(var(--bg-rgb) / .42) 100%);transition:background .5s ease}
@@ -691,8 +691,8 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
         <a class="fh-in" href="https://www.linkedin.com/in/robert-mukanda-22baro/" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn">IN</a>
         <a class="fh-gh" href="https://github.com/shutter-bashir" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub">GH</a>
         <a class="fh-mail" href="mailto:Robertbashir76@gmail.com" title="Robertbashir76@gmail.com" aria-label="Email Robertbashir76@gmail.com">@</a>
-        <a class="fh-cv" href="/Robert_Bashir_CV_Full.pdf" download title="Download full resume (PDF, 2 pages)" aria-label="Download full resume, PDF, 2 pages"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="5"/><path d="M2 23a10 10 0 0 1 20 0Z"/></svg></a>
-        <a class="fh-cv fh-cv--sm" href="/Robert_Bashir_CV_Short.pdf" download title="Download one-page resume (PDF)" aria-label="Download one-page resume, PDF"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="5"/><path d="M2 23a10 10 0 0 1 20 0Z"/></svg></a>
+        <a class="fh-cv" href="Robert_Bashir_CV_Full.pdf" download title="Download full resume (PDF, 2 pages)" aria-label="Download full resume, PDF, 2 pages"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="5"/><path d="M2 23a10 10 0 0 1 20 0Z"/></svg></a>
+        <a class="fh-cv fh-cv--sm" href="Robert_Bashir_CV_Short.pdf" download title="Download one-page resume (PDF)" aria-label="Download one-page resume, PDF"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="5"/><path d="M2 23a10 10 0 0 1 20 0Z"/></svg></a>
       </nav>
     </div>
 
@@ -711,7 +711,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
     <div class="fh-feed" id="fhFeed">
       <article class="fh-item fh-square" data-i="0">
         <a class="fh-frame" href="#case-outreach" data-case="outreach" aria-label="Open the AI Outreach case study">
-          <span class="fh-media"><video autoplay muted loop playsinline preload="metadata" poster="/media/web-crawler.jpg" aria-label="The web crawler following links across a page"><source src="/media/web-crawler.webm" type="video/webm"><source src="/media/web-crawler.mp4" type="video/mp4"></video></span>
+          <span class="fh-media"><video autoplay muted loop playsinline preload="metadata" poster="media/web-crawler.jpg" aria-label="The web crawler following links across a page"><source src="media/web-crawler.webm" type="video/webm"><source src="media/web-crawler.mp4" type="video/mp4"></video></span>
           <span class="fh-open mono" aria-hidden="true">Open case study ↗</span>
         </a>
         <div class="fh-cap"><span><b>AI Outreach</b> — Six AI agents that apply for internships with you</span><span>01 · 2026 · <a href="https://github.com/shutter-bashir/BASHIR-2.0" target="_blank" rel="noopener">Code ↗</a></span></div>
@@ -1046,7 +1046,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
     </section>
 
     <section class="cs__proto" aria-label="Video of the crawler">
-      <div class="cs__video"><video autoplay muted loop playsinline preload="metadata" poster="/media/web-crawler.jpg" aria-label="Screen recording of the crawler following the links on a web page"><source src="/media/web-crawler.webm" type="video/webm"><source src="/media/web-crawler.mp4" type="video/mp4"></video></div>
+      <div class="cs__video"><video autoplay muted loop playsinline preload="metadata" poster="media/web-crawler.jpg" aria-label="Screen recording of the crawler following the links on a web page"><source src="media/web-crawler.webm" type="video/webm"><source src="media/web-crawler.mp4" type="video/mp4"></video></div>
       <p class="cs__hint mono">The crawler at work: following the links on a page and highlighting what it finds.</p>
     </section>
 
