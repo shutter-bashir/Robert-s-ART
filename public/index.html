@@ -699,7 +699,7 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
     <aside class="fh-mid" aria-label="Notes">
       <div class="fh-notes" id="fhNotes">
         <p><b>Selected work</b><br>Five of his 10+ shipped projects, each with a live demo and a case study.</p>
-        <p>Click any piece to open its case study or live site.</p>
+        <p>Click any piece to open its case study.</p>
         <p>Built with GSAP and three.js. Updated October 2026.</p>
       </div>
       <div class="fh-index" aria-hidden="true">
@@ -717,9 +717,9 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
         <div class="fh-cap"><span><b>AI Outreach</b> — Six AI agents that apply for internships with you</span><span>01 · 2026 · <a href="https://github.com/shutter-bashir/BASHIR-2.0" target="_blank" rel="noopener">Code ↗</a></span></div>
       </article>
       <article class="fh-item fh-square" data-i="1">
-        <a class="fh-frame" href="https://pay-pap-paypal-x-ai-hackathon.vercel.app" target="_blank" rel="noopener" aria-label="Open the PAY-PAP live site">
+        <a class="fh-frame" href="#case-paypap" data-case="paypap" aria-label="Open the PAY-PAP case study">
           <span class="fh-media"><img src="media/pay-pap.webp" alt="PayPal logo, the PAY-PAP project thumbnail" loading="lazy" decoding="async"></span>
-          <span class="fh-open mono" aria-hidden="true">Open live site ↗</span>
+          <span class="fh-open mono" aria-hidden="true">Open case study ↗</span>
         </a>
         <div class="fh-cap"><span><b>PAY-PAP</b> — An AI payout agent for bulk contractor payments, built for the PayPal x AI Hackathon</span><span>02 · 2026 · <a href="https://github.com/shutter-bashir/PAY-PAP-paypal-X-AI-Hackathon-" target="_blank" rel="noopener">Code ↗</a></span></div>
       </article>
@@ -1123,7 +1123,7 @@ python main.py run --dry-run</pre>
       </section>
     </div>
 
-    <a class="cs__next" href="#case-simba" data-next><span class="label">Next</span><span>Simba →</span></a>
+    <a class="cs__next" href="#case-paypap" data-next><span class="label">Next</span><span>PAY-PAP →</span></a>
   </div>
 </div>
 
@@ -1232,6 +1232,119 @@ python3 -m http.server 8000
     </div>
 
     <a class="cs__next" href="#case-wallet" data-next><span class="label">Next</span><span>Wallet App →</span></a>
+  </div>
+</div>
+
+<div class="cs" id="casePaypap" role="dialog" aria-modal="true" aria-labelledby="ppTitle" hidden>
+  <div class="cs__bar">
+    <button class="cs__close" type="button" data-close><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1 1 11" stroke="currentColor" stroke-width="1.6"/></svg>Close</button>
+    <span class="mono">Case study / PAY-PAP</span>
+  </div>
+  <div class="cs__inner">
+    <section class="block block--hero">
+      <div class="grid">
+        <h2 class="hero__title" id="ppTitle"><span class="label">PAY-PAP</span><span class="js-split">Bulk payouts, checked by AI, released by a person®</span></h2>
+        <dl class="cs__meta mono">
+          <div><dt>Type</dt><dd>AI payout agent</dd></div>
+          <div><dt>Built for</dt><dd>PayPal x AI Hackathon</dd></div>
+          <div><dt>Built with</dt><dd>FastAPI, Next.js, Groq, PayPal Payouts</dd></div>
+          <div><dt>Code</dt><dd><a href="https://github.com/shutter-bashir/PAY-PAP-paypal-X-AI-Hackathon-" target="_blank" rel="noopener" style="text-decoration:underline;text-underline-offset:3px">GitHub, MIT licence</a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="block">
+      <div class="grid">
+        <p class="statement"><span class="label">Overview</span><span>Agencies and marketplaces pay dozens to hundreds of freelancers every month from a spreadsheet. One duplicate invoice or mistyped email sends money to the wrong person, or pays twice, and a bulk payout can't be pulled back once it is claimed. PAY-PAP checks every row before PayPal pays it. The AI prepares and explains; fixed rules and a human approval decide whether money moves.</span></p>
+      </div>
+    </section>
+
+    <section class="cs__proto" aria-label="The live app">
+      <div class="cs__browser">
+        <div class="cs__chrome">
+          <span class="cs__dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="cs__addr mono">pay-pap-paypal-x-ai-hackathon.vercel.app</span>
+          <a class="cs__tool mono" href="https://pay-pap-paypal-x-ai-hackathon.vercel.app" target="_blank" rel="noopener">Open ↗</a>
+        </div>
+        <div class="cs__view"><img src="media/pay-pap-app.webp" alt="The PAY-PAP sign-in screen: bulk contractor payouts, checked by rules and AI, released by a person" loading="lazy" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block"></div>
+      </div>
+      <p class="cs__hint mono">The live app on Vercel, running against the PayPal sandbox. Demo logins are in the README; no real money moves.</p>
+    </section>
+
+    <section class="cs__decide">
+      <div>
+        <h3 class="label" style="padding:0 0 14px">The flow</h3>
+        <h2>From a payout spreadsheet to a paid, audited batch</h2>
+        <div class="cs__agents"><div class="cs__agent"><span class="n mono">01</span><b>Upload</b><span>Drop a CSV in whatever shape the spreadsheet has. Columns are mapped and previewed.</span></div><div class="cs__agent"><span class="n mono">02</span><b>Rules</b><span>25 fixed checks: emails, amounts, caps, duplicates, invoices already paid, blocked or new payees.</span></div><div class="cs__agent"><span class="n mono">03</span><b>AI review</b><span>Each flag explained in one plain sentence, plus a batch summary with a risk level.</span></div><div class="cs__agent"><span class="n mono">04</span><b>Decide</b><span>A manager includes or excludes the flagged rows in an AG Grid table.</span></div><div class="cs__agent"><span class="n mono">05</span><b>Approve</b><span>A different person approves. The approval is signed over the exact total and expires.</span></div><div class="cs__agent"><span class="n mono">06</span><b>Pay</b><span>PayPal Payouts sends the batch; webhooks bring every status back into the report.</span></div></div>
+      </div>
+    </section>
+
+    <div class="cs__rows">
+      <section class="block block--row">
+        <div class="row">
+          <div class="row__icon"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 9.6 6.4 14.5 8 9.6 9.6 8 14.5 6.4 9.6 1.5 8 6.4 6.4Z" fill="currentColor"/></svg></div>
+          <h3 class="row__title">How the AI is used</h3>
+          <div class="cs__body"><ul><li><b>Flag explanations.</b> "DUPLICATE_INVOICE, rows 14 and 246" becomes one sentence a finance manager understands. Explanations that cite a flag that doesn't exist are dropped.</li><li><b>Batch summary.</b> A headline, a risk level, key points and recommended actions, validated against a schema.</li><li><b>Plain-English filter.</b> Type "approved contractors under $500" and the grid narrows to match.</li><li><b>The agent.</b> Answers questions about the batch with row numbers, using five fixed tools, at most eight steps, scoped to one batch. It can propose which rows to pay; a person applies it.</li><li><b>Voice questions.</b> Tap the mic and ask; Groq Whisper turns speech into a question for the agent.</li></ul>
+<pre class="cs__code" style="margin-top:18px"><i># what the AI can never do</i>
+decide a row  ·  approve a batch  ·  send money
+
+<i># the agent's only tools</i>
+validate_batch   explain_flags   filter_batch
+build_batch      <i>(proposes only)</i>
+submit_batch     <i>(refuses without a signed approval)</i></pre></div>
+        </div>
+      </section>
+      <section class="block block--row">
+        <div class="row">
+          <div class="row__icon"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="7" width="11" height="7.5" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5 7V5a3 3 0 0 1 6 0v2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3 class="row__title">Before money moves</h3>
+          <div class="cs__body"><ul><li>The person who uploads a batch can't approve it. The approval is signed with HMAC-SHA256 over the exact row count and total, and expires.</li><li>Every batch gets a fixed PayPal batch id when it is created, so a retry can never pay twice.</li><li>Receivers PayPal turned away before are blocked at upload and again at send, and so is any email domain with 3 or more rejections and no payments.</li><li>The PayPal balance is read before sending and shown on the approval card. With real money, a batch the balance can't cover is refused.</li><li>Every upload, flag, explanation, approval, payout and webhook goes into a hash-chained audit log that can be verified. Approvals can't be deleted.</li></ul></div>
+        </div>
+      </section>
+      <section class="block block--row">
+        <div class="row">
+          <div class="row__icon"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1 15 4.5 8 8 1 4.5Z" fill="currentColor"/><path d="m1 8 7 3.5L15 8M1 11.5 8 15l7-3.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3 class="row__title">Built with</h3>
+          <div class="cs__body"><div class="cs__stack">
+  <div><h4 class="mono" style="margin:0 0 12px;color:var(--muted);font-weight:400">Payments and AI</h4><dl>
+    <div><dt>PayPal Payouts API</dt><dd>Sends the approved batch, in the sandbox</dd></div>
+    <div><dt>PayPal Webhooks</dt><dd>Item and batch statuses, each signature verified with PayPal</dd></div>
+    <div><dt>APIMatic PayPal Python SDK</dt><dd>Reads the account balance before sending, with typed errors</dd></div>
+    <div><dt>Groq: gpt-oss-120b and Whisper</dt><dd>Explanations, summary, filter, agent and voice; Ollama also works</dd></div></dl></div>
+  <div><h4 class="mono" style="margin:0 0 12px;color:var(--muted);font-weight:400">The app</h4><dl>
+    <div><dt>FastAPI (Python)</dt><dd>Rules engine, approval gate, PayPal calls and the agent's tools</dd></div>
+    <div><dt>Next.js and AG Grid</dt><dd>Upload with column mapping, the review grid, approval, reconciliation and audit views</dd></div>
+    <div><dt>Supabase Postgres</dt><dd>Batches, decisions, approvals and the audit log, with guards in the database itself</dd></div>
+    <div><dt>Vercel and pytest</dt><dd>Web app and API on the free plan; tests for rules, imports, approvals, payouts and the AI layer</dd></div></dl></div>
+</div></div>
+        </div>
+      </section>
+      <section class="block block--row">
+        <div class="row">
+          <div class="row__icon"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5V8l2.5 1.5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3 class="row__title">Problems solved</h3>
+          <div class="cs__body"><ul><li><b>It learns from PayPal's rejections.</b> PayPal refused every payout to one email domain, even for accounts that existed. PAY-PAP now remembers what PayPal turned away and blocks it before the next batch.</li><li><b>Two balances, one account.</b> The dashboard and the Reporting API disagreed by over $100,000. Read through the APIMatic SDK, the report accounts for every dollar, so that is the figure the approval card trusts.</li><li><b>A wrong clock can't break approvals.</b> A PC clock a day behind made approvals expire before they were made. Expiry now comes from the database's clock, the one that checks it.</li><li><b>No server to keep running.</b> Free hosting has no background worker, so statuses arrive by webhook, the batch page asks PayPal every 15 seconds while paying, and a daily cron catches anything left.</li></ul></div>
+        </div>
+      </section>
+      <section class="block block--row">
+        <div class="row">
+          <div class="row__icon"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1" y="2" width="14" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="m4 6 2.5 2L4 10M8 10.5h4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div>
+          <h3 class="row__title">Run it</h3>
+          <div class="cs__body"><pre class="cs__code"><i># API (Python), from backend/</i>
+python -m uvicorn app.main:app --reload
+
+<i># web app (Node), from frontend/</i>
+npm install && npm run dev
+
+<i># the whole flow from the command line</i>
+python -m app.cli --help</pre>
+<p style="margin:16px 0 0;line-height:1.3;color:rgb(var(--fg-rgb) / .78)">The demo file pays 250 contractors $18,500 with 30 planted problems, and every one is caught.</p>
+<div class="chips-row" style="margin-top:18px"><a class="cs__gh" href="https://github.com/shutter-bashir/PAY-PAP-paypal-X-AI-Hackathon-" target="_blank" rel="noopener" style="margin-top:0"><svg viewBox="0 0 16 16" aria-hidden="true" style="width:11px;height:11px"><path fill="currentColor" d="M8 0a8 8 0 0 0-2.53 15.59c.4.07.55-.17.55-.38v-1.34c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.23 1.88.87 2.34.67.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 8 0Z"/></svg>View the code on GitHub</a><a class="cs__gh" href="https://pay-pap-paypal-x-ai-hackathon.vercel.app" target="_blank" rel="noopener" style="margin-top:0;background:var(--chip);color:var(--fg)"><svg viewBox="0 0 8 8" aria-hidden="true"><path d="M1 7 7 1M2.5 1H7v4.5" stroke="currentColor" fill="none"/></svg>Open the live app</a></div></div>
+        </div>
+      </section>
+    </div>
+
+    <a class="cs__next" href="#case-simba" data-next><span class="label">Next</span><span>Simba →</span></a>
   </div>
 </div>
 
@@ -1664,7 +1777,7 @@ function closeOutreach(then) {
 }
 $$('[data-case="outreach"]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); openOutreach(); }));
 ao.querySelector('[data-close]').addEventListener('click', () => closeOutreach());
-ao.querySelector('[data-next]').addEventListener('click', e => { e.preventDefault(); closeOutreach(() => openSimba()); });
+ao.querySelector('[data-next]').addEventListener('click', e => { e.preventDefault(); closeOutreach(() => openPaypap()); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && !ao.hidden) closeOutreach(); });
 if (location.hash === '#case-outreach') setTimeout(openOutreach, 300);
 
@@ -1716,6 +1829,38 @@ document.addEventListener('keydown', e => {
 });
 if (location.hash === '#case-simba') setTimeout(openSimba, 300);
 
+/* ── pay-pap case study ── */
+const pp = $('#casePaypap');
+let ppLastFocus = null;
+function openPaypap() {
+  if (!pp.hidden) return;
+  ppLastFocus = document.activeElement;
+  pp.hidden = false; pp.scrollTop = 0;
+  document.documentElement.style.overflow = 'hidden';
+  pp.querySelector('[data-close]').focus({ preventScroll: true });
+  if (HAS_GSAP && !REDUCE) {
+    gsap.fromTo(pp, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: .9, ease: 'expo.inOut', clearProps: 'clipPath' });
+    gsap.fromTo('#ppTitle .w > span', { yPercent: 110 }, { yPercent: 0, duration: 1.1, stagger: .04, ease: 'expo.out', delay: .45 });
+    gsap.fromTo('#casePaypap .cs__meta > div, #casePaypap .cs__proto', { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1, stagger: .07, ease: 'expo.out', delay: .6 });
+  }
+}
+function closePaypap(then) {
+  if (pp.hidden) return;
+  const done = () => {
+    pp.hidden = true;
+    document.documentElement.style.overflow = '';
+    if (ppLastFocus && ppLastFocus.focus) ppLastFocus.focus({ preventScroll: true });
+    if (typeof then === 'function') then();
+  };
+  if (HAS_GSAP && !REDUCE) gsap.to(pp, { clipPath: 'inset(0% 0% 100% 0%)', duration: .7, ease: 'expo.inOut', onComplete: () => { gsap.set(pp, { clearProps: 'clipPath' }); done(); } });
+  else done();
+}
+$$('[data-case="paypap"]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); openPaypap(); }));
+pp.querySelector('[data-close]').addEventListener('click', () => closePaypap());
+pp.querySelector('[data-next]').addEventListener('click', e => { e.preventDefault(); closePaypap(() => openSimba()); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && !pp.hidden) closePaypap(); });
+if (location.hash === '#case-paypap') setTimeout(openPaypap, 300);
+
 /* ── copy email ── */
 $$('[data-copy]').forEach(b => b.addEventListener('click', () => {
   const t = b.dataset.copy, label = b.textContent;
@@ -1725,7 +1870,7 @@ $$('[data-copy]').forEach(b => b.addEventListener('click', () => {
 function selectEmail() { const el = document.querySelector('.ftr__email'); if (!el) return; const r = document.createRange(); r.selectNodeContents(el); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r); }
 
 /* ── feed hero ── */
-const OPENERS = { wallet: () => openCase(), urban: () => openUrban(), outreach: () => openOutreach(), simba: () => openSimba() };
+const OPENERS = { wallet: () => openCase(), urban: () => openUrban(), outreach: () => openOutreach(), paypap: () => openPaypap(), simba: () => openSimba() };
 $$('.fh [data-case]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); const f = OPENERS[a.dataset.case]; f && f(); }));
 const fhItems = $$('.fh-item'), fhNum = $('#fhNum'), fhNotes = $('#fhNotes');
 let fhCur = 0, fhTick = false;
@@ -1806,7 +1951,7 @@ if (location.hash === '#leadership-certifications') setTimeout(openCred, 300);
 /* ── liquid navigation ── */
 const bnav = $('#bnav'), lbtns = $$('.lnav__btn');
 const navGo = a => {
-  const CLOSERS = { caseWallet: closeCase, caseUrban: closeUrban, caseOutreach: closeOutreach, caseSimba: closeSimba, credPage: closeCred };
+  const CLOSERS = { caseWallet: closeCase, caseUrban: closeUrban, caseOutreach: closeOutreach, casePaypap: closePaypap, caseSimba: closeSimba, credPage: closeCred };
   const openEl = $$('.cs').find(c => !c.hidden);
   if (a.dataset.open === 'cred') return openEl && openEl.id !== 'credPage' ? CLOSERS[openEl.id](() => openCred()) : openCred();
   if (openEl) return CLOSERS[openEl.id](() => navGo(a));
